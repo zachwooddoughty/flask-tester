@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Test html page</title>
+        {% if tags %}
+            {% for k, v in tags.items() %}
+                <meta property="og:{{ k }}" content="{{ v }}" />
+            {% endfor %}
+        {% endif %}
+    </head>
+    <body>
+        <h1>Hello, world!</h1>
+        <h4>This is served via render_template</h4>
+    </body>
+</html>
